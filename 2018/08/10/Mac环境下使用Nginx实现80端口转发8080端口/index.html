@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-b5b83833e63b9d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-c8e97e55a8b95b08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-d167b6e0e692d375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-10T09:40:30.975Z">
+<meta property="og:updated_time" content="2018-08-10T09:43:37.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac环境下使用Nginx实现80端口转发8080端口">
 <meta name="twitter:description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
@@ -347,7 +347,7 @@
       
 
       
-        <p>由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&lt;项目名&gt;和127.0.0.1/&lt;项目名&gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内其他机器通过访问IP地址/&lt;项目名&gt;（例如：IP地址是192.168.0.106，那么其他机器访问192.168.0.106/&lt;项目名&gt;）却访问不到，本来就是为了实现同网段开发和测试并行，结果其他机器却无法访问意味着这一次的搬砖是竹篮打水。<br>后来作者就利用Nginx进行80端口转发到Tomcat的8080端口实现访问，作者亲测果然好使，好了废话不多说了，干货走起来~~下面就是详细的配置步骤：</p>
+        <p>由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&lt;项目名&gt;和127.0.0.1/&lt;项目名&gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内其他机器通过访问IP地址/&lt;项目名&gt;（例如：IP地址是192.168.0.106，那么其他机器访问192.168.0.106/&lt;项目名&gt;）却访问不到，本来就是为了实现同网段开发和测试并行，结果其他机器却无法访问意味着这一次的搬砖是竹篮打水。<br>后来作者就利用Nginx进行80端口转发到Tomcat的8080端口实现访问，作者亲测果然好使，好了废话不多说了，干货走起来~~下面就是详细的配置步骤：<br><a id="more"></a></p>
 <p>##环境<br>Mac OS版本：      10.12.6<br>Nginx版本：          1.12.1</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>作者使用Homebrew安装库</p>
 <p>brew search nginx<br>brew install nginx      </p>
@@ -374,7 +374,6 @@
 <p>####Apache命令<br>停止服务：sudo /usr/sbin/apachectl stop<br>开启服务：sudo /usr/sbin/apachectl start<br>重启服务：sudo /usr/sbin/apachectl restart</p>
 <p>####Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)<br>开启：sudo nginx<br>重启：sudo nginx -s reload<br>关闭<br>首先 ，查询nginx主进程号(带有master标识的进程)：ps -ef|grep nginx<br>正常停止   sudo kill -QUIT 主进程号<br>快速停止   sudo kill -TERM 主进程号</p>
 <p>##感谢以下博客的博主<br><a href="http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html" target="_blank" rel="noopener">http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html</a><br><a href="http://blog.csdn.net/seafishyls/article/details/44546809" target="_blank" rel="noopener">http://blog.csdn.net/seafishyls/article/details/44546809</a><br><a href="http://www.cnblogs.com/94cool/p/3927084.html" target="_blank" rel="noopener">http://www.cnblogs.com/94cool/p/3927084.html</a></p>
-<a id="more"></a>
 
       
     </div>
