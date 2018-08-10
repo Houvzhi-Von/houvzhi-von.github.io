@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-b5b83833e63b9d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-c8e97e55a8b95b08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-d167b6e0e692d375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-10T09:43:37.056Z">
+<meta property="og:updated_time" content="2018-08-10T16:26:39.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac环境下使用Nginx实现80端口转发8080端口">
 <meta name="twitter:description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
@@ -352,8 +352,7 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>作者使用Homebrew安装库</p>
 <p>brew search nginx<br>brew install nginx      </p>
 <p>这样安装好之后你会发现nginx的监听端口是8080，并非80，那么此时你就需要更改Nginx的监听端口，那么这一步就很关键了，不能按照以往传统的方式去更改,读者请仔细看一下部分。<br>由于Mac OS是自带Apache服务的，它本身占用了80端口，首先你需要将Apache的监听端口改为其他或者直接将其卸载，作者是改掉它的监听端口为8011。</p>
-<p>##命令行</p>
-<p>sudo vim /etc/apache2/httpd.conf<br>图片中红色框打开原本是80端口，作者已将其改为8011。</p>
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>sudo vim /etc/apache2/httpd.conf<br>图片中红色框打开原本是80端口，作者已将其改为8011。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2534116-b5b83833e63b9d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="apache_conf.png"></p>
 <p>改动之后，将其重启    sudo /usr/sbin/apachectl restart<br>到这里，你已经将80端口释放掉了。</p>
 <p>其次你需要了解的就是plist文件。plist就是property list format的意思，是苹果用来保存应用数据的格式，其实就是个xml。可以在/usr/local/opt/nginx 下找到nginx对应的plist文件，比如在作者电脑上是 homebrew.mxcl.nginx.plist 。<br>它的内容如下：<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;<br>&lt;!DOCTYPE plist PUBLIC “-//Apple//DTD PLIST 1.0//EN” “<a href="http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;" target="_blank" rel="noopener">http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</a></p>
@@ -364,16 +363,14 @@
 <p>最后，重启你的机器，你会发现nginx在80端口启动了，试着通过<a href="http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。" target="_blank" rel="noopener">http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2534116-c8e97e55a8b95b08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="Nginx欢迎页面"></p>
 <p>如果你Tomcat的端口是8080，此时你便要启动它，之所以在此时启动Tomcat是为了先让Tomcat占用8080端口，因为在后面配置Nginx转发时需要配置8080端口的转发，为了在那个时候不被Nginx抢先占用8080端口(这里也可以不启动Tomcat，只要你在配置好nginx转发配置后不要立刻启动nginx服务即可，因为启动它便直接占用8080端口实现转发，而这时其实你还未使用8080端口)导致Tomcat的启动的失败，因此可以先让Tomcat占用端口而后在进行Nginx对8080端口的映射转发。<br>此时你的Tomcat已经启动好了，此时我们开始配置Nginx的转发配置：</p>
-<p>##命令行</p>
-<p>sudo vim /usr/local/etc/nginx/nginx.conf<br>你只需关心server节点内的配置即可</p>
+<h2 id="命令行-1"><a href="#命令行-1" class="headerlink" title="命令行"></a>命令行</h2><p>sudo vim /usr/local/etc/nginx/nginx.conf<br>你只需关心server节点内的配置即可</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2534116-d167b6e0e692d375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Nginx_conf.png"><br>server下的结点：</p>
 <p>listen：监听80端口<br>server_name：转发到哪个地址<br>proxy_pass：代理到哪个地址</p>
 <p>这其中几项配置完毕，我们将Nginx重启（重启是需要切换到Nginx目录下的）  sudo /usr/local/Cellar/nginx/1.12.1/bin/nginx -s reload</p>
 <p>到这里所有的操作都已完毕，现在你和你同一网段下的其他伙伴就可以通过直接访问IP地址/&lt;项目名&gt;  访问你的Tomcat项目了。</p>
-<p>#相关命令操作</p>
-<p>####Apache命令<br>停止服务：sudo /usr/sbin/apachectl stop<br>开启服务：sudo /usr/sbin/apachectl start<br>重启服务：sudo /usr/sbin/apachectl restart</p>
-<p>####Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)<br>开启：sudo nginx<br>重启：sudo nginx -s reload<br>关闭<br>首先 ，查询nginx主进程号(带有master标识的进程)：ps -ef|grep nginx<br>正常停止   sudo kill -QUIT 主进程号<br>快速停止   sudo kill -TERM 主进程号</p>
-<p>##感谢以下博客的博主<br><a href="http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html" target="_blank" rel="noopener">http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html</a><br><a href="http://blog.csdn.net/seafishyls/article/details/44546809" target="_blank" rel="noopener">http://blog.csdn.net/seafishyls/article/details/44546809</a><br><a href="http://www.cnblogs.com/94cool/p/3927084.html" target="_blank" rel="noopener">http://www.cnblogs.com/94cool/p/3927084.html</a></p>
+<h1 id="相关命令操作"><a href="#相关命令操作" class="headerlink" title="相关命令操作"></a>相关命令操作</h1><h4 id="Apache命令"><a href="#Apache命令" class="headerlink" title="Apache命令"></a>Apache命令</h4><p>停止服务：sudo /usr/sbin/apachectl stop<br>开启服务：sudo /usr/sbin/apachectl start<br>重启服务：sudo /usr/sbin/apachectl restart</p>
+<h4 id="Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin"><a href="#Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin" class="headerlink" title="Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)"></a>Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)</h4><p>开启：sudo nginx<br>重启：sudo nginx -s reload<br>关闭<br>首先 ，查询nginx主进程号(带有master标识的进程)：ps -ef|grep nginx<br>正常停止   sudo kill -QUIT 主进程号<br>快速停止   sudo kill -TERM 主进程号</p>
+<h2 id="感谢以下博客的博主"><a href="#感谢以下博客的博主" class="headerlink" title="感谢以下博客的博主"></a>感谢以下博客的博主</h2><p><a href="http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html" target="_blank" rel="noopener">http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html</a><br><a href="http://blog.csdn.net/seafishyls/article/details/44546809" target="_blank" rel="noopener">http://blog.csdn.net/seafishyls/article/details/44546809</a><br><a href="http://www.cnblogs.com/94cool/p/3927084.html" target="_blank" rel="noopener">http://www.cnblogs.com/94cool/p/3927084.html</a></p>
 
       
     </div>
@@ -562,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">2.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行-1"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关命令操作"><span class="nav-number"></span> <span class="nav-text">相关命令操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Apache命令"><span class="nav-number">0.0.1.</span> <span class="nav-text">Apache命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin"><span class="nav-number">0.0.2.</span> <span class="nav-text">Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢以下博客的博主"><span class="nav-number">1.</span> <span class="nav-text">感谢以下博客的博主</span></a></li></ol></div>
             
 
           </div>
