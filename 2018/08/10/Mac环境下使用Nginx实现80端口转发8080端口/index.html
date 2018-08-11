@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-b5b83833e63b9d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-c8e97e55a8b95b08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2534116-d167b6e0e692d375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-11T00:40:20.815Z">
+<meta property="og:updated_time" content="2018-08-11T00:50:23.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac环境下使用Nginx实现80端口转发8080端口">
 <meta name="twitter:description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
@@ -355,28 +355,7 @@
 <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>sudo vim /etc/apache2/httpd.conf<br>图片中红色框打开原本是80端口，作者已将其改为8011。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2534116-b5b83833e63b9d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="apache_conf.png"></p>
 <p>改动之后，将其重启    sudo /usr/sbin/apachectl restart<br>到这里，你已经将80端口释放掉了。</p>
-<p>其次你需要了解的就是plist文件。plist就是property list format的意思，是苹果用来保存应用数据的格式，其实就是个xml。可以在/usr/local/opt/nginx 下找到nginx对应的plist文件，比如在作者电脑上是 homebrew.mxcl.nginx.plist 。<br>它的内容如下：</p>
-<pre><code><?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-        <dict>
-            <key>Label</key>
-            <string>homebrew.mxcl.nginx</string>
-            <key>RunAtLoad</key>
-            <true>
-            <key>KeepAlive</key>
-            <false>
-            <key>ProgramArguments</key>
-            <array>
-                <string>/usr/local/opt/nginx/bin/nginx</string>
-                <string>-g</string>
-                <string>daemon off;</string>
-            </array>
-            <key>WorkingDirectory</key>
-            <string>/usr/local</string>
-        </false></true></dict>
-    </plist></code></pre>
-
+<p>其次你需要了解的就是plist文件。plist就是property list format的意思，是苹果用来保存应用数据的格式，其实就是个xml。可以在/usr/local/opt/nginx 下找到nginx对应的plist文件，比如在作者电脑上是 homebrew.mxcl.nginx.plist 。<br>它的内容如下：<br>&lt;pre&gt;&lt;code&gt;&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;<br>    &lt;!DOCTYPE plist PUBLIC “-//Apple//DTD PLIST 1.0//EN” “<a href="http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;" target="_blank" rel="noopener">http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;</a>&gt;<br>    &lt;plist version=”1.0”&gt;<br>        &lt;dict&gt;<br>            &lt;key&gt;Label&lt;/key&gt;<br>            &lt;string&gt;homebrew.mxcl.nginx&lt;/string&gt;<br>            &lt;key&gt;RunAtLoad&lt;/key&gt;<br>            &lt;true/&gt;<br>            &lt;key&gt;KeepAlive&lt;/key&gt;<br>            &lt;false/&gt;<br>            &lt;key&gt;ProgramArguments&lt;/key&gt;<br>            &lt;array&gt;<br>                &lt;string&gt;/usr/local/opt/nginx/bin/nginx&lt;/string&gt;<br>                &lt;string&gt;-g&lt;/string&gt;<br>                &lt;string&gt;daemon off;&lt;/string&gt;<br>            &lt;/array&gt;<br>            &lt;key&gt;WorkingDirectory&lt;/key&gt;<br>            &lt;string&gt;/usr/local&lt;/string&gt;<br>        &lt;/dict&gt;<br>    &lt;/plist&gt;&lt;/code&gt;&lt;/pre&gt;</p>
 <p>需要把这个文件复制到 /Library/LaunchDaemons 下，如果是 ~/Library/LaunchAgents 也可以，但两者有区别。<br>前者是系统启动时启动，后者则是在用户登录时启动。 接着执行launchctl load -w，如下：</p>
 <p>sudo cp /usr/local/opt/nginx/*.plist /Library/LaunchDaemons<br>sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
 <p>最后，重启你的机器，你会发现nginx在80端口启动了，试着通过<a href="http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。" target="_blank" rel="noopener">http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。</a></p>
