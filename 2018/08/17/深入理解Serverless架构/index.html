@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？回溯本源让我们先来回顾一下常见的应用服务开发上线流程。 一、直接使用物理设备开发者将应用">
+<meta name="description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解Serverless架构-[干货搬运]">
 <meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/2018/08/17/深入理解Serverless架构/index.html">
 <meta property="og:site_name" content="小智的博客">
-<meta property="og:description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？回溯本源让我们先来回顾一下常见的应用服务开发上线流程。 一、直接使用物理设备开发者将应用">
+<meta property="og:description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog.ucloud.cn/wp-content/uploads/2017/08/1_%E5%89%AF%E6%9C%AC.jpg">
 <meta property="og:image" content="http://blog.ucloud.cn/wp-content/uploads/2017/08/2.jpg">
 <meta property="og:image" content="http://blog.ucloud.cn/wp-content/uploads/2017/08/3.jpg">
 <meta property="og:image" content="http://blog.ucloud.cn/wp-content/uploads/2017/08/4.jpg">
-<meta property="og:updated_time" content="2018-08-17T06:38:56.903Z">
+<meta property="og:updated_time" content="2018-08-17T06:41:19.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解Serverless架构-[干货搬运]">
-<meta name="twitter:description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？回溯本源让我们先来回顾一下常见的应用服务开发上线流程。 一、直接使用物理设备开发者将应用">
+<meta name="twitter:description" content="本文作者：UCloud技术市场团队  随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？">
 <meta name="twitter:image" content="http://blog.ucloud.cn/wp-content/uploads/2017/08/1_%E5%89%AF%E6%9C%AC.jpg">
 
 
@@ -351,7 +351,7 @@
         <blockquote>
 <p>本文作者：UCloud技术市场团队</p>
 </blockquote>
-<p>随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？<br><img src="http://blog.ucloud.cn/wp-content/uploads/2017/08/1_%E5%89%AF%E6%9C%AC.jpg" alt=""><br>回溯本源<br>让我们先来回顾一下常见的应用服务开发上线流程。</p>
+<p>随着2014年AWS Lambda的发布和流行，近年来有关Serverless的话题和讨论越来越频繁。究竟什么是Serverless？为什么需要Serverless? Serverless是否意味着从此不再需要服务器了？Serverless究竟能为开发运维带来哪些便利呢？<br><a id="more"></a><br><img src="http://blog.ucloud.cn/wp-content/uploads/2017/08/1_%E5%89%AF%E6%9C%AC.jpg" alt=""><br>回溯本源<br>让我们先来回顾一下常见的应用服务开发上线流程。</p>
 <h3 id="一、直接使用物理设备"><a href="#一、直接使用物理设备" class="headerlink" title="一、直接使用物理设备"></a>一、直接使用物理设备</h3><p>开发者将应用程序开发测试完毕后，直接将程序和相关软件部署在物理设备上。服务器直接使用物理机。这种方式将不可避免地需要大量人工运维和重复劳动。比方说，用户数量逐渐增长时，我们需要扩容物理设备以应对更高的网站访问压力。这时候我们需要购置更多的物理服务器，并且搬运到机房的对应机架机柜中。然后，我们需要手动为新购置的物理服务器安装各种运行软件，填写好配置文件，手动部署启动好需要运行的应用程序。这些大量的重复运维劳动造成产品上线慢，迭代周期长。其次，使用物理设备直接部署应用程序将导致资源浪费。如今的物理服务器的配置越来越强大，64核128G在今天看来也不过是普通配置。很难想象你买了一台32核的物理机，却只想搭建个人博客。此外，电商行业经常为了应对促销秒杀等活动准备大量的物理资源，然而在非促销等流量低谷时段，大量物理资源处理闲置状态，不利于节约成本。</p>
 <p>最后，为了解决资源浪费的问题，我们很容易想到，可以将多个应用程序部署在同一台服务器上来充分利用资源。但由此又导致了新的麻烦，不同的应用程序经常会抢占CPU，磁盘IO，内存，难以做到隔离资源，各行其是，互不干扰。</p>
 <h3 id="二、IaaS托管硬件"><a href="#二、IaaS托管硬件" class="headerlink" title="二、IaaS托管硬件"></a>二、IaaS托管硬件</h3><p>虚拟化技术的成熟直接解决了上述直接使用物理设备的几个痛点。</p>
