@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小智的博客">
-<meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/archives/2018/index.html">
+<meta name="description" content="在工作时候，有一个功能是要获取当前时间作为该记录的创建时间插入DB，以往的时候是直接以DateTime或者直接就是以String类型插入DB的，这次是TimeStamp时间戳[有一些大神觉得时间戳是对的啊，没问题，长度够长，精度够准！其实不然，并不是长度长、位数多它就够精准！！]。笔者后台接收前端参数是一个大对象之中还套着对象，换句话来说就是子父级的关系，笔者需要外层对象插入DB后获取到外层对象D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个小小细节引发的Bug">
+<meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/2018/08/21/一个小小细节引发的Bug/index.html">
 <meta property="og:site_name" content="小智的博客">
+<meta property="og:description" content="在工作时候，有一个功能是要获取当前时间作为该记录的创建时间插入DB，以往的时候是直接以DateTime或者直接就是以String类型插入DB的，这次是TimeStamp时间戳[有一些大神觉得时间戳是对的啊，没问题，长度够长，精度够准！其实不然，并不是长度长、位数多它就够精准！！]。笔者后台接收前端参数是一个大对象之中还套着对象，换句话来说就是子父级的关系，笔者需要外层对象插入DB后获取到外层对象D">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-21T09:54:06.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小智的博客">
+<meta name="twitter:title" content="一个小小细节引发的Bug">
+<meta name="twitter:description" content="在工作时候，有一个功能是要获取当前时间作为该记录的创建时间插入DB，以往的时候是直接以DateTime或者直接就是以String类型插入DB的，这次是TimeStamp时间戳[有一些大神觉得时间戳是对的啊，没问题，长度够长，精度够准！其实不然，并不是长度长、位数多它就够精准！！]。笔者后台接收前端参数是一个大对象之中还套着对象，换句话来说就是子父级的关系，笔者需要外层对象插入DB后获取到外层对象D">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://loser_xiaozhi.coding.me/blog/archives/2018/"/>
+  <link rel="canonical" href="https://loser_xiaozhi.coding.me/blog/2018/08/21/一个小小细节引发的Bug/"/>
 
 
 
 
 
-  <title>归档 | 小智的博客</title>
+  <title>一个小小细节引发的Bug | 小智的博客</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,259 +272,187 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://loser_xiaozhi.coding.me/blog/blog/2018/08/21/一个小小细节引发的Bug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FHZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小智的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">一个小小细节引发的Bug</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T17:51:17+08:00">
+                2018-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
+                    <span itemprop="name">搬砖的艰辛之路...</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/21/一个小小细节引发的Bug/" itemprop="url">
-              
-                <span itemprop="name">一个小小细节引发的Bug</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-21T17:51:17+08:00"
-              content="2018-08-21" >
-          08-21
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/17/深入理解Serverless架构/" itemprop="url">
-              
-                <span itemprop="name">深入理解Serverless架构-[干货搬运]</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T14:26:47+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/17/记录此刻/" itemprop="url">
-              
-                <span itemprop="name">记录此刻</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T09:12:53+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/12/记一次随拍：住处的附近/" itemprop="url">
-              
-                <span itemprop="name">记一次随拍：住处的附近...</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-12T11:02:19+08:00"
-              content="2018-08-12" >
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <p>在工作时候，有一个功能是要获取当前时间作为该记录的创建时间插入DB，以往的时候是直接以DateTime或者直接就是以String类型插入DB的，这次是TimeStamp时间戳[有一些大神觉得时间戳是对的啊，没问题，长度够长，精度够准！其实不然，并不是长度长、位数多它就够精准！！]。笔者后台接收前端参数是一个大对象之中还套着对象，换句话来说就是子父级的关系，笔者需要外层对象插入DB后获取到外层对象DB内的ID作为内层对象的关联ID再进行插入，笔者获取关联ID是通过外层对象(假设这是一个用户表，传入的查询条件就是userName+createTime，这两个参数是前端传入的也就是已知确定)的已知字段进行查询获取ID，那么问题就是来了！！<br><br><a id="more"></a><br>问题的现象是：有时候根据查询条件时可以查到的，但有时候就会查询不到，经过LOGGER的打印得出结论，有时候时间戳的秒数(createTime)有时候会比原本接收的多一秒，这样关联当然查询不到，笔者此时瞬间就想到了四舍五入！经过一番查询，果不其然！<br>当TimeStamp的毫秒值 &gt; 500时，则会自动进一秒。[到此时，还认为它是精确的吗！也许吧！]</p>
+<p>对比两段代码，上面代码则会出现四舍五入的情况，下面的代码则不会：<br></p>
+<pre><code>String UUID = java.util.UUID.randomUUID().toString();
+long time = System.currentTimeMillis() + 30 * 60 * 1000;
+Timestamp outDate = new Timestamp(time);
+long outDateLong = time/1000*1000;
+user.setValidateUuid(UUID);
+user.setOutDate(outDate);
+userMapper.updateByPrimaryKey(user);
+</code></pre><hr>
+<pre><code>String UUID = java.util.UUID.randomUUID().toString();
+long time = System.currentTimeMillis() + 30 * 60 * 1000;
+long outDateLong = time/1000*1000;
+Timestamp outDate = new Timestamp(outDateLong);
+user.setValidateUuid(UUID);
+user.setOutDate(outDate);
+userMapper.updateByPrimaryKey(user);
+</code></pre>
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/10/Mac环境下使用Nginx实现80端口转发8080端口/" itemprop="url">
-              
-                <span itemprop="name">Mac环境下使用Nginx实现80端口转发8080端口</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-10T17:37:00+08:00"
-              content="2018-08-10" >
-          08-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2018/08/09/hello-world/" itemprop="url">
-              
-                <span itemprop="name">欢迎各位</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-09T17:37:00+08:00"
-              content="2018-08-09" >
-          08-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/blog/uploads/weixin_1.jpg" alt="FHZ wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，关注智镜智言！</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/08/17/深入理解Serverless架构/" rel="next" title="深入理解Serverless架构-[干货搬运]">
+                <i class="fa fa-chevron-left"></i> 深入理解Serverless架构-[干货搬运]
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -528,6 +460,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -794,6 +730,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
