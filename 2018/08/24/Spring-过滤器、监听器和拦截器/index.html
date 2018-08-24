@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一张很详细的执行链路图，如下：">
+<meta name="description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring-过滤器、监听器和拦截器">
 <meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/2018/08/24/Spring-过滤器、监听器和拦截器/index.html">
 <meta property="og:site_name" content="小智的博客">
-<meta property="og:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一张很详细的执行链路图，如下：">
+<meta property="og:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://qiniu.xds123.cn/18-7-27/55655219.jpg">
-<meta property="og:updated_time" content="2018-08-24T12:59:17.225Z">
+<meta property="og:updated_time" content="2018-08-24T13:02:40.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring-过滤器、监听器和拦截器">
-<meta name="twitter:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一张很详细的执行链路图，如下：">
+<meta name="twitter:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
 <meta name="twitter:image" content="http://qiniu.xds123.cn/18-7-27/55655219.jpg">
 
 
@@ -377,7 +377,7 @@
       
 
       
-        <p>在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但<br>是后来就通过扩展阅读得到了一张很详细的执行链路图，如下：<br><a id="more"></a><br><img src="http://qiniu.xds123.cn/18-7-27/55655219.jpg" alt="请求链路图"></p>
+        <p>在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：<br><a id="more"></a><br><img src="http://qiniu.xds123.cn/18-7-27/55655219.jpg" alt="请求链路图"></p>
 <h3 id="过滤器-Filter"><a href="#过滤器-Filter" class="headerlink" title="过滤器(Filter)"></a>过滤器(Filter)</h3><p>过滤器Filter，是Servlet的的一个实用技术了。可通过过滤器，对请求进行拦截，比如读取session判断用户是否登录、判断访问的请求URL是否有访问权限(黑白名单)等。主要还是可对请求进行预处理。</p>
 <h3 id="监听器-Listener"><a href="#监听器-Listener" class="headerlink" title="监听器(Listener)"></a>监听器(Listener)</h3><p>Listener是servlet规范中定义的一种特殊类。用于监听servletContext、HttpSession和servletRequest等域对象的创建和销毁事件。监听域对象的属性发生修改的事件。用于在事件发生前、发生后做一些必要的处理。一般是获取在线人数等业务需求。</p>
 <h3 id="拦截器-Interceptor"><a href="#拦截器-Interceptor" class="headerlink" title="拦截器(Interceptor)"></a>拦截器(Interceptor)</h3><p>在开发中处理利用以上的进行过滤web请求时，还可以使用Spring提供的拦截器(HandlerInterceptor)进行更加精细的控制</p>
