@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Spring-过滤器、监听器和拦截器]]></title>
+    <url>%2Fblog%2F2018%2F08%2F24%2FSpring-%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%9B%91%E5%90%AC%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下： 过滤器(Filter)过滤器Filter，是Servlet的的一个实用技术了。可通过过滤器，对请求进行拦截，比如读取session判断用户是否登录、判断访问的请求URL是否有访问权限(黑白名单)等。主要还是可对请求进行预处理。 监听器(Listener)Listener是servlet规范中定义的一种特殊类。用于监听servletContext、HttpSession和servletRequest等域对象的创建和销毁事件。监听域对象的属性发生修改的事件。用于在事件发生前、发生后做一些必要的处理。一般是获取在线人数等业务需求。 拦截器(Interceptor)在开发中处理利用以上的进行过滤web请求时，还可以使用Spring提供的拦截器(HandlerInterceptor)进行更加精细的控制 文章内容源自：oKong | 趔趄的猿]]></content>
+      <categories>
+        <category>搬砖的艰辛之路...</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[一个小小细节引发的Bug]]></title>
     <url>%2Fblog%2F2018%2F08%2F21%2F%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%BB%86%E8%8A%82%E5%BC%95%E5%8F%91%E7%9A%84Bug%2F</url>
     <content type="text"><![CDATA[在工作时候，有一个功能是要获取当前时间作为该记录的创建时间插入DB，以往的时候是直接以DateTime或者直接就是以String类型插入DB的，这次是TimeStamp时间戳[有一些大神觉得时间戳是对的啊，没问题，长度够长，精度够准！其实不然，并不是长度长、位数多它就够精准！！]。笔者后台接收前端参数是一个大对象之中还套着对象，换句话来说就是子父级的关系，笔者需要外层对象插入DB后获取到外层对象DB内的ID作为内层对象的关联ID再进行插入，笔者获取关联ID是通过外层对象(假设这是一个用户表，传入的查询条件就是userName+createTime，这两个参数是前端传入的也就是已知确定)的已知字段进行查询获取ID，那么问题就是来了！！问题的现象是：有时候根据查询条件时可以查到的，但有时候就会查询不到，经过LOGGER的打印得出结论，有时候时间戳的秒数(createTime)有时候会比原本接收的多一秒，这样关联当然查询不到，笔者此时瞬间就想到了四舍五入！经过一番查询，果不其然！当TimeStamp的毫秒值 &gt; 500时，则会自动进一秒。[到此时，还认为它是精确的吗！也许吧！] 对比两段代码，上面代码则会出现四舍五入的情况，下面的代码则不会： String UUID = java.util.UUID.randomUUID().toString(); long time = System.currentTimeMillis() + 30 * 60 * 1000; Timestamp outDate = new Timestamp(time); long outDateLong = time/1000*1000; user.setValidateUuid(UUID); user.setOutDate(outDate); userMapper.updateByPrimaryKey(user); String UUID = java.util.UUID.randomUUID().toString(); long time = System.currentTimeMillis() + 30 * 60 * 1000; long outDateLong = time/1000*1000; Timestamp outDate = new Timestamp(outDateLong); user.setValidateUuid(UUID); user.setOutDate(outDate); userMapper.updateByPrimaryKey(user);]]></content>
