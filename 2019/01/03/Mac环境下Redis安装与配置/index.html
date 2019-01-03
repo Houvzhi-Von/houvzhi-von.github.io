@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="Git常用命令速查表">
+<meta name="description" content="之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis  安装    –    (操作系统环境：macOS 10.14.2)笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令速查表">
-<meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/2018/10/13/Git常用命令速查表/index.html">
+<meta property="og:title" content="Mac环境下Redis安装与配置">
+<meta property="og:url" content="https://loser_xiaozhi.coding.me/blog/2019/01/03/Mac环境下Redis安装与配置/index.html">
 <meta property="og:site_name" content="小智的博客">
-<meta property="og:description" content="Git常用命令速查表">
+<meta property="og:description" content="之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis  安装    –    (操作系统环境：macOS 10.14.2)笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2534116-422bccad6a0b4066.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-12-14T00:53:46.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2534116-590b5ae5c34639a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-01-03T10:04:10.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git常用命令速查表">
-<meta name="twitter:description" content="Git常用命令速查表">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2534116-422bccad6a0b4066.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Mac环境下Redis安装与配置">
+<meta name="twitter:description" content="之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis  安装    –    (操作系统环境：macOS 10.14.2)笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2534116-590b5ae5c34639a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://loser_xiaozhi.coding.me/blog/2018/10/13/Git常用命令速查表/"/>
+  <link rel="canonical" href="https://loser_xiaozhi.coding.me/blog/2019/01/03/Mac环境下Redis安装与配置/"/>
 
 
 
 
 
-  <title>Git常用命令速查表 | 小智的博客</title>
+  <title>Mac环境下Redis安装与配置 | 小智的博客</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://loser_xiaozhi.coding.me/blog/blog/2018/10/13/Git常用命令速查表/">
+    <link itemprop="mainEntityOfPage" href="https://loser_xiaozhi.coding.me/blog/blog/2019/01/03/Mac环境下Redis安装与配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FHZ">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git常用命令速查表</h1>
+          <h1 class="post-title" itemprop="name headline">Mac环境下Redis安装与配置</h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-13T13:37:08+08:00">
-                2018-10-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T18:02:03+08:00">
+                2019-01-03
               </time>
             
 
@@ -377,8 +377,33 @@
       
 
       
-        <h3 id="Git常用命令速查表"><a href="#Git常用命令速查表" class="headerlink" title="Git常用命令速查表"></a>Git常用命令速查表</h3><a id="more"></a>
-<p><img src="https://upload-images.jianshu.io/upload_images/2534116-422bccad6a0b4066.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git常用命令速查表"></p>
+        <center><img src="https://upload-images.jianshu.io/upload_images/2534116-590b5ae5c34639a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="redis"></center>
+
+<blockquote>
+<p>之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis</p>
+</blockquote>
+<h2 id="安装-–-操作系统环境：macOS-10-14-2"><a href="#安装-–-操作系统环境：macOS-10-14-2" class="headerlink" title="安装    –    (操作系统环境：macOS 10.14.2)"></a>安装    –    (操作系统环境：macOS 10.14.2)</h2><p>笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew安装的话，默认就会是最新的稳定版本。<br><br><a id="more"></a></p>
+<blockquote>
+<p>执行命令—(执行该命令的前提是电脑已经安装好了homebrew，如果未安装请自行百度方法，这里不再赘述)</p>
+</blockquote>
+<p>brew install redis</p>
+<p>安装完毕后,会在 /usr/local/etc 路径下有 redis.conf 文件，该文件就是redis的配置文件。<br><br>为了方便开发者的使用，我们需要修改几个配置，如下：<br></p>
+<p>daemonize的默认配置是no，将其改为yes。这个配置项意思是Redis的守护模式是否开启。no：不开启，那这意味着redis要必须保持命令终端保持开启不能后台启动，改为yes则代表开启守护模式，那这样我们就可以后台启动redis不需要一直停留在当前的启动窗口，提高开发使用效率。<br></p>
+<p>port 是redis的端口属性，默认是6379，一般来说在开发环境下很少去改动这个默认的端口配置，如果需要修改则改成自己想设置的即可。<br></p>
+<p>loglevel 是日志的级别，默认是notice。将其设置为debug，如此一来的设置对于开发者是很友好的，看到更多和开发相关的信息。</p>
+<p>logfile 是redis日志文件的保存位置，默认是空的，需要自行添加一个日志保存路径，这里建议把保存redis日志文件创建在无需sudo命令就能够打开执行的位置，否则redis启动时加载日志时显示没有足够权限访问，那么就会启动失败，所以这里建议用户设置为不需要sudo权限就可以读写的位置中去，【建议在Users路径下创建目录来进行保存日志】。<br></p>
+<blockquote>
+<p>关于redis配置的相关内容，开发者可以根据自身的需求来进行个性化的配置即可。</p>
+</blockquote>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><blockquote>
+<p>执行命令—启动redis</p>
+</blockquote>
+<p>redis-server [配置文件所在的路径]/redis.conf <br><br>(假如配置文件所在路径是: /usr/local/etc/),那么命令就是如此: redis-server /usr/local/etc/redis.conf</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote>
+<p>执行命令—客户端操作</p>
+</blockquote>
+<p>可以在终端窗口使用 redis-cli 来操作redis服务</p>
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><p>找到redis对应的pid服务 kill -9 Pid 杀死服务进程即可</p>
 
       
     </div>
@@ -411,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/10/08/一年之后，再度和家乡拥抱/" rel="next" title="一年之后，再度和家乡拥抱...">
-                <i class="fa fa-chevron-left"></i> 一年之后，再度和家乡拥抱...
+              <a href="/blog/2018/10/29/小智常用工具类网址/" rel="next" title="小智常用工具类网址">
+                <i class="fa fa-chevron-left"></i> 小智常用工具类网址
               </a>
             
           </div>
@@ -420,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2018/10/19/Homebrew日常更新与维护/" rel="prev" title="Homebrew日常更新与维护">
-                Homebrew日常更新与维护 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git常用命令速查表"><span class="nav-number">1.</span> <span class="nav-text">Git常用命令速查表</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-–-操作系统环境：macOS-10-14-2"><span class="nav-number">1.</span> <span class="nav-text">安装    –    (操作系统环境：macOS 10.14.2)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">2.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">3.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭"><span class="nav-number">4.</span> <span class="nav-text">关闭</span></a></li></ol></div>
             
 
           </div>
