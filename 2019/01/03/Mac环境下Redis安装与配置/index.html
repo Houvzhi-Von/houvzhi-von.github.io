@@ -87,7 +87,7 @@
 <meta property="og:description" content="之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis  安装    –    (操作系统环境：macOS 10.14.2)笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2534116-590b5ae5c34639a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-01-03T10:04:10.620Z">
+<meta property="og:updated_time" content="2019-01-04T02:18:48.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac环境下Redis安装与配置">
 <meta name="twitter:description" content="之前在工作中大量用到redis，近一年中的项目里很少再去操作redis，导致笔者已经忘记了redis的很多用法，用此篇博文特此来回忆巩固一下之前熟悉的redis  安装    –    (操作系统环境：macOS 10.14.2)笔者使用Homebrew安装redis，默认安装redis最新稳定版，redis官网提供最新的版本和稳定版本，用户可以根据自己意愿进行下载，但是使用Homebrew">
@@ -388,7 +388,7 @@
 </blockquote>
 <p>brew install redis</p>
 <p>安装完毕后,会在 /usr/local/etc 路径下有 redis.conf 文件，该文件就是redis的配置文件。<br><br>为了方便开发者的使用，我们需要修改几个配置，如下：<br></p>
-<p>daemonize的默认配置是no，将其改为yes。这个配置项意思是Redis的守护模式是否开启。no：不开启，那这意味着redis要必须保持命令终端保持开启不能后台启动，改为yes则代表开启守护模式，那这样我们就可以后台启动redis不需要一直停留在当前的启动窗口，提高开发使用效率。<br></p>
+<p>daemonize的默认配置是no，将其改为yes。这个配置项意思是Redis的守护模式是否开启。no：不开启，那这意味着redis要必须保持命令终端开启而不能后台启动，改为yes则代表开启守护模式，这样一来就可以后台启动redis不需要一直停留在终端启动窗口，提高开发使用效率。<br></p>
 <p>port 是redis的端口属性，默认是6379，一般来说在开发环境下很少去改动这个默认的端口配置，如果需要修改则改成自己想设置的即可。<br></p>
 <p>loglevel 是日志的级别，默认是notice。将其设置为debug，如此一来的设置对于开发者是很友好的，看到更多和开发相关的信息。</p>
 <p>logfile 是redis日志文件的保存位置，默认是空的，需要自行添加一个日志保存路径，这里建议把保存redis日志文件创建在无需sudo命令就能够打开执行的位置，否则redis启动时加载日志时显示没有足够权限访问，那么就会启动失败，所以这里建议用户设置为不需要sudo权限就可以读写的位置中去，【建议在Users路径下创建目录来进行保存日志】。<br></p>
