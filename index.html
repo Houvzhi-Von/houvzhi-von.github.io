@@ -283,6 +283,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2019/03/21/CentOS环境下LibreOffice安装与配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FHZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小智的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/21/CentOS环境下LibreOffice安装与配置/" itemprop="url">CentOS环境下LibreOffice安装与配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T17:57:57+08:00">
+                2019-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
+                    <span itemprop="name">搬砖的艰辛之路...</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://upload-images.jianshu.io/upload_images/2534116-881ab95b926e4168.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="LibreOffice.png"></p>
+<blockquote>
+<p>刚刚结束了公司内部项目的第一期开发，收货满满！项目作用是用于处理公司一些法律裁决文书的在线批注，涉及到了WORD、PDF、txt等常见文本格式转换为HTML文档的功能，以往Java可以通过POI的形式去对这些文档进行格式的转换，但是要达到友好、兼容性都要兼顾到的效果就需要利用强大的LibreOffice来作为中间处理层辅助我们进行更好的转换！</p>
+</blockquote>
+<h2 id="LibreOffice-安装-–-（操作系统环境：-CentOS-7-2）-（LibreOffice-6-2）"><a href="#LibreOffice-安装-–-（操作系统环境：-CentOS-7-2）-（LibreOffice-6-2）" class="headerlink" title="LibreOffice 安装 – （操作系统环境： CentOS 7.2）|（LibreOffice 6.2）"></a>LibreOffice 安装 – （操作系统环境： CentOS 7.2）|（LibreOffice 6.2）</h2><h4 id="首先，需要执行以下三行下载命令，将LibreOffice三个包下载到机器本地"><a href="#首先，需要执行以下三行下载命令，将LibreOffice三个包下载到机器本地" class="headerlink" title="首先，需要执行以下三行下载命令，将LibreOffice三个包下载到机器本地"></a>首先，需要执行以下三行下载命令，将LibreOffice三个包下载到机器本地<br></h4><p>wget <a href="http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm.tar.gz" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm.tar.gz</a> <br><br>wget <a href="http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm_sdk.tar.gz" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm_sdk.tar.gz</a> <br><br>wget <a href="http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/</a> <br></p>
+<h4 id="其次，在-usr-目录下创建-LibreOffice-文件夹，将第一步下载的三个包解压到该文件目录下，解压完成后分别进入各自解压的目录下的-RPMS-目录下安装rpm"><a href="#其次，在-usr-目录下创建-LibreOffice-文件夹，将第一步下载的三个包解压到该文件目录下，解压完成后分别进入各自解压的目录下的-RPMS-目录下安装rpm" class="headerlink" title="其次，在 /usr 目录下创建 LibreOffice 文件夹，将第一步下载的三个包解压到该文件目录下，解压完成后分别进入各自解压的目录下的 /RPMS 目录下安装rpm "></a>其次，在 /usr 目录下创建 LibreOffice 文件夹，将第一步下载的三个包解压到该文件目录下，解压完成后分别进入各自解压的目录下的 /RPMS 目录下安装rpm <br></h4><p>yum localinstall *.rpm</p>
+<h2 id="字体安装"><a href="#字体安装" class="headerlink" title="字体安装"></a>字体安装</h2><p>拷贝windows中的simsun.ttc到/usr/share/fonts/simsun/ <br><br>cd /usr/share/fonts/simsun <br><br>mkfontscale <br><br>mkfontdir <br><br>fc-cache -fv <br><br>执行以下命令让字体生效 <br><br>source /etc/profile <br></p>
+<h3 id="至此，LibreOffice的安装已经完成"><a href="#至此，LibreOffice的安装已经完成" class="headerlink" title="至此，LibreOffice的安装已经完成"></a>至此，LibreOffice的安装已经完成</h3><hr>
+<h3 id="流程安装完毕，需要一个文件来测试一下LibreOffice能否正常工作"><a href="#流程安装完毕，需要一个文件来测试一下LibreOffice能否正常工作" class="headerlink" title="流程安装完毕，需要一个文件来测试一下LibreOffice能否正常工作"></a>流程安装完毕，需要一个文件来测试一下LibreOffice能否正常工作</h3><p>假设，在服务器目录 /usr/local/ 目录下有一个 txt 文本文件： test.txt</p>
+<h4 id="执行命令-libreoffice6-2-–invisible-–convert-to-html-usr-local-test-txt"><a href="#执行命令-libreoffice6-2-–invisible-–convert-to-html-usr-local-test-txt" class="headerlink" title="执行命令 libreoffice6.2 –invisible –convert-to html  /usr/local/test.txt"></a>执行命令 libreoffice6.2 –invisible –convert-to html  /usr/local/test.txt</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2019/01/22/“The-Rocket”——Ronnie·O-Sullivan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1603,152 +1753,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2018/08/24/Spring-过滤器、监听器和拦截器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FHZ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小智的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/24/Spring-过滤器、监听器和拦截器/" itemprop="url">Spring-过滤器、监听器和拦截器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-24T20:50:50+08:00">
-                2018-08-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
-                    <span itemprop="name">搬砖的艰辛之路...</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/24/Spring-过滤器、监听器和拦截器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1803,7 +1807,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

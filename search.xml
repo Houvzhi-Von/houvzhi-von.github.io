@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CentOS环境下LibreOffice安装与配置]]></title>
+    <url>%2F2019%2F03%2F21%2FCentOS%E7%8E%AF%E5%A2%83%E4%B8%8BLibreOffice%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[刚刚结束了公司内部项目的第一期开发，收货满满！项目作用是用于处理公司一些法律裁决文书的在线批注，涉及到了WORD、PDF、txt等常见文本格式转换为HTML文档的功能，以往Java可以通过POI的形式去对这些文档进行格式的转换，但是要达到友好、兼容性都要兼顾到的效果就需要利用强大的LibreOffice来作为中间处理层辅助我们进行更好的转换！ LibreOffice 安装 – （操作系统环境： CentOS 7.2）|（LibreOffice 6.2）首先，需要执行以下三行下载命令，将LibreOffice三个包下载到机器本地wget http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm.tar.gz wget http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/LibreOffice_6.2.0_Linux_x86-64_rpm_sdk.tar.gz wget http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.0/rpm/x86_64/ 其次，在 /usr 目录下创建 LibreOffice 文件夹，将第一步下载的三个包解压到该文件目录下，解压完成后分别进入各自解压的目录下的 /RPMS 目录下安装rpm yum localinstall *.rpm 字体安装拷贝windows中的simsun.ttc到/usr/share/fonts/simsun/ cd /usr/share/fonts/simsun mkfontscale mkfontdir fc-cache -fv 执行以下命令让字体生效 source /etc/profile 至此，LibreOffice的安装已经完成 流程安装完毕，需要一个文件来测试一下LibreOffice能否正常工作假设，在服务器目录 /usr/local/ 目录下有一个 txt 文本文件： test.txt 执行命令 libreoffice6.2 –invisible –convert-to html /usr/local/test.txt]]></content>
+      <categories>
+        <category>搬砖的艰辛之路...</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[“The Rocket”——Ronnie·O'Sullivan]]></title>
     <url>%2F2019%2F01%2F22%2F%E2%80%9CThe-Rocket%E2%80%9D%E2%80%94%E2%80%94Ronnie%C2%B7O-Sullivan%2F</url>
     <content type="text"><![CDATA[小学六年级的时候，我父亲经常在电脑上看斯诺克比赛，在那时我就听说过奥沙利文、希金斯等一些人的大名，只是那时年纪尚小。在2014年春节，还是和父亲在家里用大屏电视机看罗尼的比赛。从那以后，我心里就默默的划出一片小天地给了他。这个人就是——罗尼·奥沙利文！！！ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 罗尼·奥沙利文（Ronnie O’Sullivan）：世界著名球手，因击球速度快，打法流畅，球迷赠与“The Rocket（火箭）”之称，他是斯诺克运动中罕见的天才型选手。作为斯诺克有史以来最具天赋球手，左手技术和右手技术一样出色，他第一次参加比赛就打破了世界纪录，取得了惊人的成绩，自从1992年转为职业选手以来，创下了一系列惊人的记录。 来自对手的评价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 奥沙利文是我所遇到过的最具天赋的斯诺克选手，他的每一杆击球和走位都是相当完美。他身上所拥有的，其实并不是什么球技，而是妖术，一种令凡夫俗子们望尘莫及的魔幻力量。————来自于斯诺克世锦赛七冠得主–” 皇帝 “ 斯蒂芬·亨得利、斯诺克世锦赛六冠得主–” 天然金块儿 “ 史蒂夫·戴维斯&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 奥沙利文将斯诺克这项人类最难的运动变得荒谬、简单。他是我见过的最有天赋的球员，他为斯诺克带来了很多快乐。他是一位天赋异禀的运动员，有时他打球甚至连自己也看不懂，而且他还比一般人更勤奋。————来自于斯诺克世锦赛四冠得主–” 巫师 “ 约翰·希金斯、斯诺克名将–阿兰·麦克马努斯、中国斯诺克名将–丁俊晖 图集]]></content>
