@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小智的博客">
-<meta property="og:url" content="https://loser-xiaozhi.github.io/categories/技术杂谈/index.html">
+<meta name="description" content="镜像、容器、仓库是Docker三大核心概念。 1. 镜像 (image)镜像可以类比虚拟机的镜像，或者可以理解为是一款软件的安装包。例如：Redis镜像、Nginx镜像、Ubuntu镜像等。镜像是创建Docker的基础。开发者可以在网络上下载获取到已经设置完好的镜像来直接应用开发。  2. 容器 (Container)容器类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker基本概念">
+<meta property="og:url" content="https://loser-xiaozhi.github.io/2019/03/27/Docker基本概念/index.html">
 <meta property="og:site_name" content="小智的博客">
+<meta property="og:description" content="镜像、容器、仓库是Docker三大核心概念。 1. 镜像 (image)镜像可以类比虚拟机的镜像，或者可以理解为是一款软件的安装包。例如：Redis镜像、Nginx镜像、Ubuntu镜像等。镜像是创建Docker的基础。开发者可以在网络上下载获取到已经设置完好的镜像来直接应用开发。  2. 容器 (Container)容器类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/27/169be39478b2aabc?w=1568&h=898&f=png&s=534125">
+<meta property="og:updated_time" content="2019-03-27T08:33:03.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小智的博客">
+<meta name="twitter:title" content="Docker基本概念">
+<meta name="twitter:description" content="镜像、容器、仓库是Docker三大核心概念。 1. 镜像 (image)镜像可以类比虚拟机的镜像，或者可以理解为是一款软件的安装包。例如：Redis镜像、Nginx镜像、Ubuntu镜像等。镜像是创建Docker的基础。开发者可以在网络上下载获取到已经设置完好的镜像来直接应用开发。  2. 容器 (Container)容器类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/3/27/169be39478b2aabc?w=1568&h=898&f=png&s=534125">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://loser-xiaozhi.github.io/categories/技术杂谈/"/>
+  <link rel="canonical" href="https://loser-xiaozhi.github.io/2019/03/27/Docker基本概念/"/>
 
 
 
 
 
-  <title>分类: 技术杂谈 | 小智的博客</title>
+  <title>Docker基本概念 | 小智的博客</title>
   
 
 
@@ -140,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,55 +274,182 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>技术杂谈<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2019/03/27/Docker基本概念/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FHZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小智的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/17/深入理解Serverless架构/" itemprop="url">
-              
-                <span itemprop="name">深入理解Serverless架构-[干货搬运]</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Docker基本概念</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T14:26:47+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T16:30:56+08:00">
+                2019-03-27
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
+                    <span itemprop="name">搬砖的艰辛之路...</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p><img src="https://user-gold-cdn.xitu.io/2019/3/27/169be39478b2aabc?w=1568&amp;h=898&amp;f=png&amp;s=534125" alt="Docker"></p>
+<blockquote>
+<h4 id="镜像、容器、仓库是Docker三大核心概念。"><a href="#镜像、容器、仓库是Docker三大核心概念。" class="headerlink" title="镜像、容器、仓库是Docker三大核心概念。"></a><em>镜像、容器、仓库是Docker三大核心概念。</em></h4></blockquote>
+<h2 id="1-镜像-image"><a href="#1-镜像-image" class="headerlink" title="1. 镜像 (image)"></a>1. 镜像 (image)</h2><font size="3">镜像可以类比虚拟机的镜像，或者可以理解为是一款软件的安装包。例如：Redis镜像、Nginx镜像、Ubuntu镜像等。镜像是创建Docker的基础。<br><br>开发者可以在网络上下载获取到已经设置完好的镜像来直接应用开发。</font>
+
+<h2 id="2-容器-Container"><a href="#2-容器-Container" class="headerlink" title="2. 容器 (Container)"></a>2. 容器 (Container)</h2><font size="3">容器类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜像中创建出来的应用实例，类似于Java中的类和通过类实例化对象之间的关系。每个容器类似Java类实例出来的对象一样，各自有各自的操作周期等，是彼此相互隔离、互不可见的。</font><br><a id="more"></a><br>&gt; <strong>镜像本身是只读的，不可以对其操作修改。容器从镜像启动时，其实会在镜像的最上一层生成一个可读写层。</strong><br><br>## 3. 仓库 (Repository)<br><br><font size="3"><br>讲到仓库这个概念其实就很容易理解了，现在很多开发者代码版本工具都是使用 <strong><em>Git</em></strong>，Docker仓库的概念和 <strong><em>Git</em></strong> 思路大致相同，因为Docker在很多地方设计就是参见Git来进行构建开发的，这就让开发者们对Docker的使用更加得心应手、触类旁通。<br><br>顾名思义，仓库就是用来放很多东西的地方，那么Docker仓库就是集中存放镜像文件的场所。每个Docker仓库中存放着一类Docker镜像的集合，它们之间通过 <strong><em>tag</em></strong> 来进行区分,例如：Ubuntu镜像仓库就存放着很多Ubuntu镜像，tag可能有14.04、16.04等等，这些tag可以理解为不同的版本镜像。目前最大的公开仓库莫过于Docker官方的 <strong><a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a></strong>,这里用到最大的 <strong><em>公有</em></strong> 仓库，那是不是还有私有的，没错是的。当开发者们不愿意公开自己的镜像文件，Docker也是支持他们在本地网络创建私有仓库，这样就很好的解决了镜像仓库移植的问题，以后如果想在其他机器上使用时，直接从仓库pull即可，真正达到了云迁移的效果。<br></font>
+
+
+<h2 id="Docker常用操作命令"><a href="#Docker常用操作命令" class="headerlink" title="Docker常用操作命令"></a>Docker常用操作命令</h2><h3 id="1-docker-version-可以参看安装docker服务端、客户端的版本信息"><a href="#1-docker-version-可以参看安装docker服务端、客户端的版本信息" class="headerlink" title="1. docker version 可以参看安装docker服务端、客户端的版本信息"></a>1. docker version 可以参看安装docker服务端、客户端的版本信息</h3><h3 id="2-docker-ps-列出docker主机上当前正在运行的容器"><a href="#2-docker-ps-列出docker主机上当前正在运行的容器" class="headerlink" title="2. docker ps 列出docker主机上当前正在运行的容器"></a>2. docker ps 列出docker主机上当前正在运行的容器</h3><h3 id="3-docker-pull-NAME-TAG-从仓库中拉取下载镜像"><a href="#3-docker-pull-NAME-TAG-从仓库中拉取下载镜像" class="headerlink" title="3. docker pull NAME[:TAG] 从仓库中拉取下载镜像"></a>3. docker pull NAME[:TAG] 从仓库中拉取下载镜像</h3><h3 id="4-docker-images-列出本地主机已有的镜像基本信息"><a href="#4-docker-images-列出本地主机已有的镜像基本信息" class="headerlink" title="4. docker images 列出本地主机已有的镜像基本信息"></a>4. docker images 列出本地主机已有的镜像基本信息</h3><h3 id="5-docker-tag-OLD-TAG-NEW-TAG-在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。"><a href="#5-docker-tag-OLD-TAG-NEW-TAG-在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。" class="headerlink" title="5. docker tag [OLD-TAG] [NEW-TAG] 在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。"></a>5. docker tag [OLD-TAG] [NEW-TAG] 在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。</h3><h3 id="6-docker-inspect-NAME-列出镜像的详细信息"><a href="#6-docker-inspect-NAME-列出镜像的详细信息" class="headerlink" title="6. docker inspect [NAME] 列出镜像的详细信息"></a>6. docker inspect [NAME] 列出镜像的详细信息</h3><pre><code>docker inspect -f {{".[属性名]"}} 查看详情中单个信息的内容
+</code></pre><h3 id="7-docker-search-NAME-搜索远程仓库的镜像"><a href="#7-docker-search-NAME-搜索远程仓库的镜像" class="headerlink" title="7. docker search [NAME] 搜索远程仓库的镜像"></a>7. docker search [NAME] 搜索远程仓库的镜像</h3><h3 id="8-docker-rmi-NAME-TAG-删除镜像-当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作-，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。"><a href="#8-docker-rmi-NAME-TAG-删除镜像-当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作-，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。" class="headerlink" title="8. docker rmi NAME[:TAG] 删除镜像[当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作]，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。"></a>8. docker rmi NAME[:TAG] 删除镜像[当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作]，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。</h3><h3 id="9-docker-rmi-f-NAME-强制删除镜像"><a href="#9-docker-rmi-f-NAME-强制删除镜像" class="headerlink" title="9. docker rmi -f [NAME] 强制删除镜像"></a>9. docker rmi -f [NAME] 强制删除镜像</h3><blockquote>
+<p><strong>在删除Docker镜像时，合理的做法应该是先将镜像创建的容器都删除掉之后再来删除镜像</strong></p>
+</blockquote>
+<h3 id="10-docker-save-将镜像保存为本地文件"><a href="#10-docker-save-将镜像保存为本地文件" class="headerlink" title="10. docker save 将镜像保存为本地文件"></a>10. docker save 将镜像保存为本地文件</h3><h3 id="11-docker-load-将本地镜像文件导入到本地镜像库"><a href="#11-docker-load-将本地镜像文件导入到本地镜像库" class="headerlink" title="11. docker load 将本地镜像文件导入到本地镜像库"></a>11. docker load 将本地镜像文件导入到本地镜像库</h3><h3 id="12-docker-push-NAME-TAG-将镜像上传至仓库"><a href="#12-docker-push-NAME-TAG-将镜像上传至仓库" class="headerlink" title="12. docker push NAME[:TAG] 将镜像上传至仓库"></a>12. docker push NAME[:TAG] 将镜像上传至仓库</h3>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weixin_1.jpg" alt="FHZ wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，关注智镜智言！</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/21/CentOS环境下LibreOffice安装与配置/" rel="next" title="CentOS环境下LibreOffice安装与配置">
+                <i class="fa fa-chevron-left"></i> CentOS环境下LibreOffice安装与配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -324,6 +457,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -344,8 +481,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -430,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#镜像、容器、仓库是Docker三大核心概念。"><span class="nav-number">1.</span> <span class="nav-text">镜像、容器、仓库是Docker三大核心概念。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-镜像-image"><span class="nav-number"></span> <span class="nav-text">1. 镜像 (image)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-容器-Container"><span class="nav-number"></span> <span class="nav-text">2. 容器 (Container)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker常用操作命令"><span class="nav-number"></span> <span class="nav-text">Docker常用操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-docker-version-可以参看安装docker服务端、客户端的版本信息"><span class="nav-number"></span> <span class="nav-text">1. docker version 可以参看安装docker服务端、客户端的版本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-docker-ps-列出docker主机上当前正在运行的容器"><span class="nav-number"></span> <span class="nav-text">2. docker ps 列出docker主机上当前正在运行的容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-docker-pull-NAME-TAG-从仓库中拉取下载镜像"><span class="nav-number"></span> <span class="nav-text">3. docker pull NAME[:TAG] 从仓库中拉取下载镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-docker-images-列出本地主机已有的镜像基本信息"><span class="nav-number"></span> <span class="nav-text">4. docker images 列出本地主机已有的镜像基本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-docker-tag-OLD-TAG-NEW-TAG-在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。"><span class="nav-number"></span> <span class="nav-text">5. docker tag [OLD-TAG] [NEW-TAG] 在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-docker-inspect-NAME-列出镜像的详细信息"><span class="nav-number"></span> <span class="nav-text">6. docker inspect [NAME] 列出镜像的详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-docker-search-NAME-搜索远程仓库的镜像"><span class="nav-number"></span> <span class="nav-text">7. docker search [NAME] 搜索远程仓库的镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-docker-rmi-NAME-TAG-删除镜像-当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作-，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。"><span class="nav-number"></span> <span class="nav-text">8. docker rmi NAME[:TAG] 删除镜像[当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作]，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-docker-rmi-f-NAME-强制删除镜像"><span class="nav-number"></span> <span class="nav-text">9. docker rmi -f [NAME] 强制删除镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-docker-save-将镜像保存为本地文件"><span class="nav-number"></span> <span class="nav-text">10. docker save 将镜像保存为本地文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-docker-load-将本地镜像文件导入到本地镜像库"><span class="nav-number"></span> <span class="nav-text">11. docker load 将本地镜像文件导入到本地镜像库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-docker-push-NAME-TAG-将镜像上传至仓库"><span class="nav-number"></span> <span class="nav-text">12. docker push NAME[:TAG] 将镜像上传至仓库</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -570,6 +732,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
