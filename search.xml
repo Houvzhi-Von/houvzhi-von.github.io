@@ -9,11 +9,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[D7100]]></title>
-    <url>%2F2019%2F07%2F21%2FD7100%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Docker基本概念]]></title>
     <url>%2F2019%2F03%2F27%2FDocker%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%2F</url>
     <content type="text"><![CDATA[镜像、容器、仓库是Docker三大核心概念。 1. 镜像 (image)镜像可以类比虚拟机的镜像，或者可以理解为是一款软件的安装包。例如：Redis镜像、Nginx镜像、Ubuntu镜像等。镜像是创建Docker的基础。开发者可以在网络上下载获取到已经设置完好的镜像来直接应用开发。 2. 容器 (Container) 容器类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜像中创建出来的应用实例，类似于Java中的类和通过类实例化对象之间的关系。每个容器类似Java类实例出来的对象一样，各自有各自的操作周期等，是彼此相互隔离、互不可见的。 镜像本身是只读的，不可以对其操作修改。容器从镜像启动时，其实会在镜像的最上一层生成一个可读写层。 3. 仓库 (Repository)讲到仓库这个概念其实就很容易理解了，现在很多开发者代码版本工具都是使用 Git，Docker仓库的概念和 Git 思路大致相同，因为Docker在很多地方设计就是参见Git来进行构建开发的，这就让开发者们对Docker的使用更加得心应手、触类旁通。顾名思义，仓库就是用来放很多东西的地方，那么Docker仓库就是集中存放镜像文件的场所。每个Docker仓库中存放着一类Docker镜像的集合，它们之间通过 tag 来进行区分,例如：Ubuntu镜像仓库就存放着很多Ubuntu镜像，tag可能有14.04、16.04等等，这些tag可以理解为不同的版本镜像。目前最大的公开仓库莫过于Docker官方的 Docker Hub,这里用到最大的 公有 仓库，那是不是还有私有的，没错是的。当开发者们不愿意公开自己的镜像文件，Docker也是支持他们在本地网络创建私有仓库，这样就很好的解决了镜像仓库移植的问题，以后如果想在其他机器上使用时，直接从仓库pull即可，真正达到了云迁移的效果。 Docker常用操作命令1. docker version 可以参看安装docker服务端、客户端的版本信息2. docker ps 列出docker主机上当前正在运行的容器3. docker pull NAME[:TAG] 从仓库中拉取下载镜像4. docker images 列出本地主机已有的镜像基本信息5. docker tag [OLD-TAG] [NEW-TAG] 在旧tag指向的镜像建一个新的tag指向该镜像，ps：并不是对旧的tag重新命名，这个操作单单只是新建一个tag和旧的tag指向同一个容器，直白来讲就是对一个镜像取了两个名字。6. docker inspect [NAME] 列出镜像的详细信息docker inspect -f {{".[属性名]"}} 查看详情中单个信息的内容 7. docker search [NAME] 搜索远程仓库的镜像8. docker rmi NAME[:TAG] 删除镜像[当且仅当镜像对应的tag仅剩一个时，执行该命令才是删除镜像的操作]，一个镜像若是拥有多个tag时，执行该命令只是将对应的tag删除并非直接删除原镜像。9. docker rmi -f [NAME] 强制删除镜像 在删除Docker镜像时，合理的做法应该是先将镜像创建的容器都删除掉之后再来删除镜像 10. docker save 将镜像保存为本地文件11. docker load 将本地镜像文件导入到本地镜像库12. docker push NAME[:TAG] 将镜像上传至仓库]]></content>
