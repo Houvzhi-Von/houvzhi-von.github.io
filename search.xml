@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[宁波行Ⅱ - By Galaxy S9]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%AE%81%E6%B3%A2%E8%A1%8C%E2%85%A1-By-Galaxy-S9%2F</url>
+    <content type="text"><![CDATA[周日返程宁波正好有了时间拍照，赶住了宁波的傍晚一组样张——美到爆!]]></content>
+      <categories>
+        <category>智镜</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[macOS使用SSH key登录远程服务器]]></title>
     <url>%2F2019%2F07%2F24%2FmacOS%E4%BD%BF%E7%94%A8SSH%20key%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[macOS是基于UNIX内核开发的，所以在连接Linux服务器有很大的优势，并不像是在 Windows 环境上还得依赖客户端软件去发起远程连接。但是macOS一般情况开发者还是需要使用 \&lt;用户名&gt;@\&lt;IP地址&gt; 这样的形式来登录连接，如果密码设置的是强密码，很复杂的话经常会出现登录失败这样的情况，这会让人头大影响工作效率。为了提高效率减少这类情况的发生，使用SSH Key登录更安全，配置好之后，确保私钥的安全下，可以不设置密码，实现免密登录，也更方便。 如果电脑有配置过 Git 的SSH key的话接下来这一步可以省略直接看后面： 创建密钥 在创建密钥的时候，可以定义加密类型和长度，具体可以参考ssh-keygen命令帮助。创建的过程中，首先会提示要保存的位置和文件名，再提示要给密钥加个密码，也可以直接回车不要密码。公钥和私钥默认保存这用户目录的/.ssh/文件夹下。默认情况下，id_rsa为私钥，id_rsa.pub为公钥。 远程服务器ssh设置 此时还是需要用用户名和密码登录远程Linux服务器。使用vi编辑 /etc/ssh/sshd_config 文件，先打开PubkeyAuthentication和PermitRootLogin，一般只要把这几个参数前面的#（注释符）删掉即可. PubkeyAuthentication yes PermitRootLogin yes 重启ssh服务 systemctl restart sshd.service 上传公钥到远程服务器 在macOS端操作以下命令，把公钥上传到远程服务器，会提示输入远程的Linux服务器的密码: scp ~/.ssh/id_rsa.pub \&lt;用户名&gt;@\&lt;ip地址&gt;:/root/id_rsa.pub 在远程Linux服务器上，操作以下命令，把公钥追加到服务器ssh认证文件中: cat /root/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys 如果没有authorized_keys这个文件，请到.ssh文件夹下创建一个，并把权限设置为600: cat authorized_keys. chmod 600 authorized_keys. 追加好后，如果要禁止用户名密码登录，再编辑/etc/ssh/sshd_config文件，把PasswordAuthentication设置为no，重启SSH服务。 好了，SSH Key登录已经设置完毕，如果没有设置密钥密码，直接这终端输入ssh root@IP即可登录远程服务器。如果该用户下没有公钥，则会提示Permission denied。 至此，使用SSH key登录Linux的配置就完成了，以后再也不用担心密码输入错误了！！]]></content>
