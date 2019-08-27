@@ -79,21 +79,25 @@
 
 
 
-<meta name="description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
+<meta name="description" content="小智近日又带着 「 Nikon D7100 」 去到南京江宁区百家湖·1912街区拍摄   百家湖·1912街区">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac环境下使用Nginx实现80端口转发8080端口">
-<meta property="og:url" content="https://loser-xiaozhi.github.io/2018/08/10/Mac环境下使用Nginx实现80端口转发8080端口/index.html">
+<meta property="og:title" content="百家湖·1912行 - By ikon D7100">
+<meta property="og:url" content="https://loser-xiaozhi.github.io/2019/08/27/百家湖·1912行-By-ikon-D7100/index.html">
 <meta property="og:site_name" content="智镜智言">
-<meta property="og:description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
+<meta property="og:description" content="小智近日又带着 「 Nikon D7100 」 去到南京江宁区百家湖·1912街区拍摄   百家湖·1912街区">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://image.osnooker.com/apache_conf.jpg">
-<meta property="og:image" content="http://image.osnooker.com/nginx_welcome.jpg">
-<meta property="og:image" content="http://image.osnooker.com/nginx_conf.jpg">
-<meta property="og:updated_time" content="2019-07-18T03:42:37.423Z">
+<meta property="og:image" content="http://image.osnooker.com/1912_2.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bmw.jpg">
+<meta property="og:image" content="http://image.osnooker.com/motianlun_11.jpg">
+<meta property="og:image" content="http://image.osnooker.com/motinalun_12.jpg">
+<meta property="og:image" content="http://image.osnooker.com/jingfeng_1.jpg">
+<meta property="og:image" content="http://image.osnooker.com/xiaomi_1.jpg">
+<meta property="og:image" content="http://image.osnooker.com/1912_3.jpg">
+<meta property="og:updated_time" content="2019-08-27T05:54:41.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac环境下使用Nginx实现80端口转发8080端口">
-<meta name="twitter:description" content="由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&amp;lt;项目名&amp;gt;和127.0.0.1/&amp;lt;项目名&amp;gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内">
-<meta name="twitter:image" content="http://image.osnooker.com/apache_conf.jpg">
+<meta name="twitter:title" content="百家湖·1912行 - By ikon D7100">
+<meta name="twitter:description" content="小智近日又带着 「 Nikon D7100 」 去到南京江宁区百家湖·1912街区拍摄   百家湖·1912街区">
+<meta name="twitter:image" content="http://image.osnooker.com/1912_2.jpg">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://loser-xiaozhi.github.io/2018/08/10/Mac环境下使用Nginx实现80端口转发8080端口/"/>
+  <link rel="canonical" href="https://loser-xiaozhi.github.io/2019/08/27/百家湖·1912行-By-ikon-D7100/"/>
 
 
 
 
 
-  <title>Mac环境下使用Nginx实现80端口转发8080端口 | 智镜智言</title>
+  <title>百家湖·1912行 - By ikon D7100 | 智镜智言</title>
   
 
 
@@ -290,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2018/08/10/Mac环境下使用Nginx实现80端口转发8080端口/">
+    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2019/08/27/百家湖·1912行-By-ikon-D7100/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FHZ">
@@ -307,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac环境下使用Nginx实现80端口转发8080端口</h1>
+          <h1 class="post-title" itemprop="name headline">百家湖·1912行 - By ikon D7100</h1>
         
 
         <div class="post-meta">
@@ -319,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T17:37:00+08:00">
-                2018-08-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T13:38:25+08:00">
+                2019-08-27
               </time>
             
 
@@ -342,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
-                    <span itemprop="name">搬砖的艰辛之路...</span>
+                  <a href="/categories/智镜/" itemprop="url" rel="index">
+                    <span itemprop="name">智镜</span>
                   </a>
                 </span>
 
@@ -379,28 +383,17 @@
       
 
       
-        <p>由于项目本身的原因，开发必须使用80端口实现，而在Unix内核中非Root用户无法直接使用1024以下的端口，最初作者找到了pfctl的方式实现80端口转发到8080端口实现访问，经过亲测出现了最为严重的问题，按照当时的方法配置好之后发现本机Mac通过localhost/&lt;项目名&gt;和127.0.0.1/&lt;项目名&gt;可以访问，此时很是兴奋，但出现了最根本的问题，那就是同局域网内其他机器通过访问IP地址/&lt;项目名&gt;（例如：IP地址是192.168.0.106，那么其他机器访问192.168.0.106/&lt;项目名&gt;）却访问不到，本来就是为了实现同网段开发和测试并行，结果其他机器却无法访问意味着这一次的搬砖是竹篮打水。<br>后来作者就利用Nginx进行80端口转发到Tomcat的8080端口实现访问，作者亲测果然好使，好了废话不多说了，干货走起来~~下面就是详细的配置步骤：<br><a id="more"></a></p>
-<p>##环境<br>Mac OS版本：      10.12.6<br>Nginx版本：          1.12.1</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>作者使用Homebrew安装库</p>
-<p>brew search nginx<br>brew install nginx      </p>
-<p>这样安装好之后你会发现nginx的监听端口是8080，并非80，那么此时你就需要更改Nginx的监听端口，那么这一步就很关键了，不能按照以往传统的方式去更改,读者请仔细看一下部分。<br>由于Mac OS是自带Apache服务的，它本身占用了80端口，首先你需要将Apache的监听端口改为其他或者直接将其卸载，作者是改掉它的监听端口为8011。</p>
-<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>sudo vim /etc/apache2/httpd.conf<br>图片中红色框打开原本是80端口，作者已将其改为8011。</p>
-<p><img src="http://image.osnooker.com/apache_conf.jpg" alt="apache_conf.png"></p>
-<p>改动之后，将其重启    sudo /usr/sbin/apachectl restart<br>到这里，你已经将80端口释放掉了。</p>
-<p>其次你需要了解的就是plist文件。plist就是property list format的意思，是苹果用来保存应用数据的格式，其实就是个xml。可以在/usr/local/opt/nginx 下找到nginx对应的plist文件，比如在作者电脑上是 homebrew.mxcl.nginx.plist 。<br>它的内容如下：<br>    &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;<br>        &lt;!DOCTYPE plist PUBLIC “-//Apple//DTD PLIST 1.0//EN” “<a href="http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;" target="_blank" rel="noopener">http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;</a>&gt;<br>        &lt;plist version=”1.0”&gt;<br>            &lt;dict&gt;<br>                &lt;key&gt;Label&lt;/key&gt;<br>                &lt;string&gt;homebrew.mxcl.nginx&lt;/string&gt;<br>                &lt;key&gt;RunAtLoad&lt;/key&gt;<br>                &lt;true/&gt;<br>                &lt;key&gt;KeepAlive&lt;/key&gt;<br>                &lt;false/&gt;<br>                &lt;key&gt;ProgramArguments&lt;/key&gt;<br>                &lt;array&gt;<br>                    &lt;string&gt;/usr/local/opt/nginx/bin/nginx&lt;/string&gt;<br>                    &lt;string&gt;-g&lt;/string&gt;<br>                    &lt;string&gt;daemon off;&lt;/string&gt;<br>                &lt;/array&gt;<br>                &lt;key&gt;WorkingDirectory&lt;/key&gt;<br>                &lt;string&gt;/usr/local&lt;/string&gt;<br>            &lt;/dict&gt;<br>        &lt;/plist&gt;</p>
-<p>需要把这个文件复制到 /Library/LaunchDaemons 下，如果是 ~/Library/LaunchAgents 也可以，但两者有区别。<br>前者是系统启动时启动，后者则是在用户登录时启动。 接着执行launchctl load -w，如下：</p>
-<p>sudo cp /usr/local/opt/nginx/*.plist /Library/LaunchDaemons<br>sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
-<p>最后，重启你的机器，你会发现nginx在80端口启动了，试着通过<a href="http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。" target="_blank" rel="noopener">http://localhost直接访问，若出现下边图片的显示则意味着你的Nginx的80端口已经配置完成，意味着你已经完成了六成的工作。</a></p>
-<p><img src="http://image.osnooker.com/nginx_welcome.jpg" alt="Nginx欢迎页面"></p>
-<p>如果你Tomcat的端口是8080，此时你便要启动它，之所以在此时启动Tomcat是为了先让Tomcat占用8080端口，因为在后面配置Nginx转发时需要配置8080端口的转发，为了在那个时候不被Nginx抢先占用8080端口(这里也可以不启动Tomcat，只要你在配置好nginx转发配置后不要立刻启动nginx服务即可，因为启动它便直接占用8080端口实现转发，而这时其实你还未使用8080端口)导致Tomcat的启动的失败，因此可以先让Tomcat占用端口而后在进行Nginx对8080端口的映射转发。<br>此时你的Tomcat已经启动好了，此时我们开始配置Nginx的转发配置：</p>
-<h2 id="命令行-1"><a href="#命令行-1" class="headerlink" title="命令行"></a>命令行</h2><p>sudo vim /usr/local/etc/nginx/nginx.conf<br>你只需关心server节点内的配置即可</p>
-<p><img src="http://image.osnooker.com/nginx_conf.jpg" alt="Nginx_conf.png"><br>server下的结点：</p>
-<p>listen：监听80端口<br>server_name：转发到哪个地址<br>proxy_pass：代理到哪个地址</p>
-<p>这其中几项配置完毕，我们将Nginx重启（重启是需要切换到Nginx目录下的）  sudo /usr/local/Cellar/nginx/1.12.1/bin/nginx -s reload</p>
-<p>到这里所有的操作都已完毕，现在你和你同一网段下的其他伙伴就可以通过直接访问IP地址/&lt;项目名&gt;  访问你的Tomcat项目了。</p>
-<h1 id="相关命令操作"><a href="#相关命令操作" class="headerlink" title="相关命令操作"></a>相关命令操作</h1><h4 id="Apache命令"><a href="#Apache命令" class="headerlink" title="Apache命令"></a>Apache命令</h4><p>停止服务：sudo /usr/sbin/apachectl stop<br>开启服务：sudo /usr/sbin/apachectl start<br>重启服务：sudo /usr/sbin/apachectl restart</p>
-<h4 id="Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin"><a href="#Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin" class="headerlink" title="Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)"></a>Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)</h4><p>开启：sudo nginx<br>重启：sudo nginx -s reload<br>关闭<br>首先 ，查询nginx主进程号(带有master标识的进程)：ps -ef|grep nginx<br>正常停止   sudo kill -QUIT 主进程号<br>快速停止   sudo kill -TERM 主进程号</p>
-<h2 id="感谢以下博客的博主"><a href="#感谢以下博客的博主" class="headerlink" title="感谢以下博客的博主"></a>感谢以下博客的博主</h2><p><a href="http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html" target="_blank" rel="noopener">http://www.cnblogs.com/kavlez/p/start-nginx-on-port-80-at-os-x.html</a><br><a href="http://blog.csdn.net/seafishyls/article/details/44546809" target="_blank" rel="noopener">http://blog.csdn.net/seafishyls/article/details/44546809</a><br><a href="http://www.cnblogs.com/94cool/p/3927084.html" target="_blank" rel="noopener">http://www.cnblogs.com/94cool/p/3927084.html</a></p>
+        <blockquote>
+<p>小智近日又带着 「 Nikon D7100 」 去到南京江宁区百家湖·1912街区拍摄<br><br></p>
+</blockquote>
+<ul>
+<li>百家湖·1912街区</li>
+</ul>
+<p><img src="http://image.osnooker.com/1912_2.jpg" alt=""><br><img src="http://image.osnooker.com/bmw.jpg" alt=""><br><img src="http://image.osnooker.com/motianlun_11.jpg" alt=""><br><img src="http://image.osnooker.com/motinalun_12.jpg" alt=""><br><a id="more"></a></p>
+<ul>
+<li>百家湖·景枫中心</li>
+</ul>
+<p><img src="http://image.osnooker.com/jingfeng_1.jpg" alt=""><br><img src="http://image.osnooker.com/xiaomi_1.jpg" alt=""><br><img src="http://image.osnooker.com/1912_3.jpg" alt=""></p>
 
       
     </div>
@@ -433,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/09/hello-world/" rel="next" title="欢迎各位">
-                <i class="fa fa-chevron-left"></i> 欢迎各位
+              <a href="/2019/08/19/极品飞车20-体验/" rel="next" title="极品飞车20 - 体验">
+                <i class="fa fa-chevron-left"></i> 极品飞车20 - 体验
               </a>
             
           </div>
@@ -442,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/17/深入理解Serverless架构/" rel="prev" title="深入理解Serverless架构-[干货搬运]">
-                深入理解Serverless架构-[干货搬运] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,17 +486,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -592,22 +572,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">2.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行-1"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关命令操作"><span class="nav-number"></span> <span class="nav-text">相关命令操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Apache命令"><span class="nav-number">0.0.1.</span> <span class="nav-text">Apache命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx命令-需要在Nginx的目录下执行，目录-usr-local-Cellar-nginx-1-12-1-bin"><span class="nav-number">0.0.2.</span> <span class="nav-text">Nginx命令(需要在Nginx的目录下执行，目录:/usr/local/Cellar/nginx/1.12.1/bin/)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢以下博客的博主"><span class="nav-number">1.</span> <span class="nav-text">感谢以下博客的博主</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
