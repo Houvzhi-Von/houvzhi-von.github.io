@@ -79,19 +79,35 @@
 
 
 
-<meta name="description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
+<meta name="description" content="近日来，新冠肺炎疫情得到控制，江苏继续保持无新增病例的乐观态势，其他省份的数量也正在逐渐减少，这对民众来说是大好消息 ！ 在此时刻，小智再度背起了相机走上街头记录当下的南京百态……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring-过滤器、监听器和拦截器">
-<meta property="og:url" content="https://loser-xiaozhi.github.io/2018/08/24/Spring-过滤器、监听器和拦截器/index.html">
+<meta property="og:title" content="如春 | 初醒">
+<meta property="og:url" content="https://loser-xiaozhi.github.io/2020/03/06/如春-初醒/index.html">
 <meta property="og:site_name" content="智镜智言">
-<meta property="og:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
+<meta property="og:description" content="近日来，新冠肺炎疫情得到控制，江苏继续保持无新增病例的乐观态势，其他省份的数量也正在逐渐减少，这对民众来说是大好消息 ！ 在此时刻，小智再度背起了相机走上街头记录当下的南京百态……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://qiniu.xds123.cn/18-7-27/55655219.jpg">
-<meta property="og:updated_time" content="2018-12-14T00:53:46.000Z">
+<meta property="og:image" content="http://image.osnooker.com/bxl_1.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_2.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_3.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_4.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_5.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_6.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_7.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_8.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_9.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_10.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_11.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_12.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_13.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_14.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_15.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_16.jpg">
+<meta property="og:image" content="http://image.osnooker.com/bxl_17.jpg">
+<meta property="og:updated_time" content="2020-03-06T13:37:06.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring-过滤器、监听器和拦截器">
-<meta name="twitter:description" content="在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：">
-<meta name="twitter:image" content="http://qiniu.xds123.cn/18-7-27/55655219.jpg">
+<meta name="twitter:title" content="如春 | 初醒">
+<meta name="twitter:description" content="近日来，新冠肺炎疫情得到控制，江苏继续保持无新增病例的乐观态势，其他省份的数量也正在逐渐减少，这对民众来说是大好消息 ！ 在此时刻，小智再度背起了相机走上街头记录当下的南京百态……">
+<meta name="twitter:image" content="http://image.osnooker.com/bxl_1.jpg">
 
 
 
@@ -121,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://loser-xiaozhi.github.io/2018/08/24/Spring-过滤器、监听器和拦截器/"/>
+  <link rel="canonical" href="https://loser-xiaozhi.github.io/2020/03/06/如春-初醒/"/>
 
 
 
 
 
-  <title>Spring-过滤器、监听器和拦截器 | 智镜智言</title>
+  <title>如春 | 初醒 | 智镜智言</title>
   
 
 
@@ -288,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2018/08/24/Spring-过滤器、监听器和拦截器/">
+    <link itemprop="mainEntityOfPage" href="https://loser-xiaozhi.github.io/2020/03/06/如春-初醒/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.小智">
@@ -305,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring-过滤器、监听器和拦截器</h1>
+          <h1 class="post-title" itemprop="name headline">如春 | 初醒</h1>
         
 
         <div class="post-meta">
@@ -317,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-24T20:50:50+08:00">
-                2018-08-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-06T21:25:39+08:00">
+                2020-03-06
               </time>
             
 
@@ -340,8 +356,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搬砖的艰辛之路/" itemprop="url" rel="index">
-                    <span itemprop="name">搬砖的艰辛之路...</span>
+                  <a href="/categories/智镜/" itemprop="url" rel="index">
+                    <span itemprop="name">智镜</span>
                   </a>
                 </span>
 
@@ -377,15 +393,25 @@
       
 
       
-        <p>在开发Java Web项目时，经常会接触到过滤器、监听器和拦截器这些内容，很多朋友有时候会混淆这些概念也不是很清楚它们各自的作用和执行的流程，笔者曾经也是这样的，但是后来就通过扩展阅读得到了一篇很详细的执行链路图，如下：<br><a id="more"></a><br><img src="http://qiniu.xds123.cn/18-7-27/55655219.jpg" alt="请求链路图"></p>
-<h3 id="过滤器-Filter"><a href="#过滤器-Filter" class="headerlink" title="过滤器(Filter)"></a>过滤器(Filter)</h3><p>过滤器Filter，是Servlet的的一个实用技术了。可通过过滤器，对请求进行拦截，比如读取session判断用户是否登录、判断访问的请求URL是否有访问权限(黑白名单)等。主要还是可对请求进行预处理。</p>
-<h3 id="监听器-Listener"><a href="#监听器-Listener" class="headerlink" title="监听器(Listener)"></a>监听器(Listener)</h3><p>Listener是servlet规范中定义的一种特殊类。用于监听servletContext、HttpSession和servletRequest等域对象的创建和销毁事件。监听域对象的属性发生修改的事件。用于在事件发生前、发生后做一些必要的处理。一般是获取在线人数等业务需求。</p>
-<h3 id="拦截器-Interceptor"><a href="#拦截器-Interceptor" class="headerlink" title="拦截器(Interceptor)"></a>拦截器(Interceptor)</h3><p>在开发中处理利用以上的进行过滤web请求时，还可以使用Spring提供的拦截器(HandlerInterceptor)进行更加精细的控制</p>
-<p><br></p>
-<hr>
-<blockquote>
-<p>文章内容源自：<a href="https://blog.lqdev.cn/2018/07/19/springboot/chapter-seven/#%E7%9B%91%E5%90%AC%E5%99%A8" target="_blank" rel="noopener">oKong | 趔趄的猿</a></p>
-</blockquote>
+        <p>近日来，新冠肺炎疫情得到控制，江苏继续保持无新增病例的乐观态势，其他省份的数量也正在逐渐减少，这对民众来说是大好消息 ！</p>
+<p>在此时刻，小智再度背起了相机走上街头记录当下的南京百态……<br><a id="more"></a></p>
+<p><img src="http://image.osnooker.com/bxl_1.jpg" alt="">  </p>
+<p><img src="http://image.osnooker.com/bxl_2.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_3.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_4.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_5.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_6.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_7.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_8.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_9.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_10.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_11.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_12.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_13.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_14.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_15.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_16.jpg" alt=""></p>
+<p><img src="http://image.osnooker.com/bxl_17.jpg" alt=""></p>
 
       
     </div>
@@ -418,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/21/一个小小细节引发的Bug/" rel="next" title="一个小小细节引发的Bug">
-                <i class="fa fa-chevron-left"></i> 一个小小细节引发的Bug
+              <a href="/2020/02/02/Mac环境下使用Docker安装MySQL/" rel="next" title="Mac环境下使用Docker安装MySQL">
+                <i class="fa fa-chevron-left"></i> Mac环境下使用Docker安装MySQL
               </a>
             
           </div>
@@ -427,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/01/BootStrap-Table基础使用记录/" rel="prev" title="BootStrap-Table基础使用记录">
-                BootStrap-Table基础使用记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -482,17 +504,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -577,22 +590,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#过滤器-Filter"><span class="nav-number">1.</span> <span class="nav-text">过滤器(Filter)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#监听器-Listener"><span class="nav-number">2.</span> <span class="nav-text">监听器(Listener)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截器-Interceptor"><span class="nav-number">3.</span> <span class="nav-text">拦截器(Interceptor)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
